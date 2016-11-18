@@ -3,6 +3,7 @@
 
   window.git = window.git || {};
   window.git.searchRepos = searchRepos;
+  window.git.searchCommits = searchCommits;
   /**
    * It is supposed to be able to search the github api
    *
@@ -16,16 +17,19 @@
       headers: {
         Authorization: 'token ' + api
       }
-    })
-    .then(function handleSuccess(data) {
-      var repos = data.items;
-      var randomRepo = repos[Math.floor(Math.random()*repos.length)];
-      console.log(randomRepo);
-
     });
-
   }
 
+  function  searchCommits(api, url) {
+    return $.ajax({
+      url: url.split("{")[0],
+      method: 'GET',
+      dataType: 'json',
+      headers: {
+        Authorization: 'token ' + api
+      }
+    });
+  }
 
 
 }());
