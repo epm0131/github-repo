@@ -1,0 +1,26 @@
+{
+  "name": "github-repo",
+  "version": "1.0.0",
+  "description": "TIY Assignment: Practice using Promises and localStorage by writing a couple Ajax calls in succession to find a random GitHub contributor and then save that data locally for later.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epm0131/github-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epm0131/github-repo/issues"
+  },
+  "homepage": "https://github.com/epm0131/github-repo#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
