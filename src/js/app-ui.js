@@ -19,8 +19,7 @@
           console.log(randomRepo);
           var url = randomRepo.commits_url;
           console.log(url);
-          var p = window.git.searchCommits(api, url);
-          return p;
+          return window.git.searchCommits(api, url);
 
         })
         .then(function handleSuccess(data) {
@@ -28,7 +27,16 @@
           var author = data[0].commit.author.name;
           console.log(author);
           var avatar = data[0].author.avatar_url;
-          console.log(avatar);  
+          console.log(avatar);
+
+          localStorage.setItem('author', 'avatar');
+          console.log('set author in local storage');
+
+          $('#contributors ul')
+            .append(
+              '<li><img src="' + avatar + '">'+ ' ' + author + '</li>'
+            );
+
         });
 
 
