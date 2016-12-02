@@ -29,7 +29,7 @@
           var avatar = data[0].author.avatar_url;
           console.log(avatar);
 
-          localStorage.setItem('author', 'avatar');
+          localStorage.setItem('author', JSON.stringify(author));
           console.log('set author in local storage');
 
           $('#contributors ul')
